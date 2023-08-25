@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinarian</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        *{
+            border: 0px solid;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .contenedor-padre{
+            width: 100%;
+        }
+        .container{
+            padding-top: 0px;
+            padding-bottom: 5px;
+            background-color: #daac00;
+            display: flex;
+            position: fixed;
+            width: 100%;
+        }
+        .logo{
+            width:25%;   
+            display: flex;
+            justify-content: flex-end;
+        }
+        .logo img{
+            width: 60%;
+            justify-content: flex-end;
+        }
+        .barra{
+            display: flex;
+            width: 50%;
+            justify-content: space-evenly;
+            align-items:center ;
+            font-weight: bolder;
+        }
+        .barra a{
+            text-decoration: none;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;   
+        }
+        .barra a:hover{
+            color: grey;
+
+        }
+        .buscador{
+            width: 15%;
+            display: flex;
+            align-items: center;
+            
+        }
+        .buscador input{
+            width: 100%;
+            height: 30px;
+            background-color: #fcc302;
+            
+        }
+        .buscador input::placeholder{
+          color: whitesmoke;
+            
+        }
+        .lupa{
+            display: flex;
+            background-color: #00bdc9;
+            align-items: center;
+            justify-content: center;
+            width: 5%;
+            height: 32px;
+            margin-top: 11px;
+        }
+        .lupa img{
+            height: 32px;
+            
+        }
+        
+        main{
+            background-color:#fcc302 ;
+            display: flex;
+            padding-top: 122px;
+            justify-content: center;
+            
+        }
+        .container-dog{
+            display: flex;
+            align-items: center;
+            
+        }
+        
+        .box-text h1{
+            color: white;
+            font-size: 54px;
+            margin-bottom: 0px;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .box-parrafo{
+            display: flex;
+            align-content: flex-start;
+        }
+        .box-parrafo p{
+            color: white;
+            font-size: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            
+        }
+        .box-contact{
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            
+        }
+        .box-contact a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .box-contact .contact1{
+            background-color: #00bdc9;
+            
+            border-color: transparent;
+        }
+        .box-contact .contact2{
+            border:1px solid;
+        }
+        .box-img img{
+            height: 500px;
+        }
+        
+        .container3{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 630px;
+            width: 100%;
+        }
+        .container3-sec2{
+            width: 40%;
+        }
+        .container3-sec2--titulo, .container3-sec2--img, .container3-sec2--parrafo,.container3-sec2--contact{
+            display: flex;
+            justify-content: flex-start;
+        }
+        .container3-sec2--titulo{
+            font-size: 28px;
+            
+        }
+        .container3-sec2--titulo h2{
+            margin-bottom: 0;
+        }
+        .container3-sec2--parrafo{
+            font-size: 28px;
+        }
+        .container3-sec2--contact a{
+            background-color: #fcc302;
+            color:white;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            
+        }
+        .container3-sec2--img img{
+            height: 300px;
+            
+        }
+        .container4{
+            background-color: #fcc302;
+            color: white;
+            width: 100%;
+            height: 600px;
+            padding-top: 73px;
+            padding-bottom: 20px;
+        }
+        .container4-text{
+            text-align: center;
+            
+        }
+        .container4-text--titulo{
+            display: flex;
+            justify-content: center;
+            
+            
+        }
+        .container4-text--titulo h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 40px;
+            margin-bottom: 0%;
+            
+        }
+        .container4-text--parrafo p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 26px;
+        }
+        .container4-img{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+        .container4-img1, .container4-img2, .container4-img3{
+            width: 20%;
+            
+        }
+        .container4-img1--veti1, .container4-img2--veti2,.container4-img3--veti3{
+           
+           display: flex;
+           justify-content: center;
+           
+        }
+        .container4-img1--veti1 img, .container4-img2--veti2 img,.container4-img3--veti3 img{
+           
+            width: 200px;
+
+        }
+        
+        .container4-img1--titulo, .container4-img2--titulo, .container4-img3--titulo{
+            text-align: center;
+            font-size: 25px;
+            
+        }
+        .container4-img1--titulo h3, .container4-img2--titulo h3, .container4-img3--titulo h3{
+            margin-bottom: 0px;
+            margin-top: 2px;
+            
+        }
+        .container4-img1--parrafo , .container4-img2--parrafo , .container4-img3--parrafo {
+           
+           display: flex;
+           
+           
+        }
+        .container4-img1--parrafo p, .container4-img2--parrafo p, .container4-img3--parrafo p{
+           
+            font-size: 19px;
+            text-align: center;
+            
+            
+        }
+        .container5{
+            width: 100%;
+            height: 590px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container5-hijo1{
+            display: flex;
+            justify-content: end;
+            width: 40%;
+        }
+        .container5-hijo1 img{
+            width: 400px;
+        }
+        .container5-hijo2{
+            width: 40%;
+            height: 300px;
+        }
+        .container5-hijo2--titulo{
+            display: flex;
+            justify-content: flex-end;
+
+        }
+        .container5-hijo2 h3{
+            font-size: 40px;
+            text-align: end;
+            margin-bottom: 10px;
+            
+        }
+        .container5-hijo2--parrafo{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .container5-hijo2--parrafo p{
+            font-size: 23px;
+            
+            width: 90%;
+            text-align: end;
+        }
+        .container5-hijo2--boton{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .container5-hijo2--boton a{
+            background-color: #daac00;
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .container6{
+            background-color: #fcc302;
+            width: 100%;
+            height: 650px;
+            color: whitesmoke;
+
+        }
+        
+        .container6-text--titulo, .container6-text--parrafo{
+            display: flex;
+            justify-content: center;
+
+        }
+        .container6-text--titulo h2{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 50px;
+            margin-bottom: 0px;
+        }
+        .container6-text--parrafo p{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+            text-align: center;
+            width: 50%;
+            padding-bottom: 2px;
+        }
+        .container6-img{
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+        }
+        .container6-img1 , .container6-img2 , .container6-img3{
+            border: 1px solid whitesmoke;
+        }
+        .dog{
+            width: 200px;
+        }
+        .precio1, .comprar{
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+        }
+
+        .precio1 p{
+            font-size: 25px;
+            font-weight: bold;
+            
+           
+        }
+        .comprar{
+            height: 50px;
+            align-items: center;
+        }
+        .comprar a{
+            background-color: #00bdc9;
+            border-radius: 10px;
+            color: whitesmoke;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            padding: 8px;
+            width: 40%;
+                       
+
+        }
+
+
+        .container7{
+            width: 100%;
+            height: 660px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+        }
+        .container7-hijo1--titulo{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .container7-hijo1--parrafo p{
+            font-size: 25px;
+            
+        }
+        .container7-hijo1--titulo h3{
+            font-size: 45px;
+            margin: 10px;
+        }
+        .container7-hijo2{
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .logotipos{
+            display: flex;
+            justify-content: center;
+
+        }
+        .logos img{
+            width: 20px;
+        }
+        
+        .container7-hijo2--doc1---img1 img , .container7-hijo2--doc2---img2 img, .container7-hijo2--doc3---img3 img{
+            width: 200px;
+            
+        } 
+        .container7-hijo2--doc1---profesion1 , .container7-hijo2--doc2---profesion2 ,.container7-hijo2--doc3---profesion3{
+            display: flex;   
+            justify-content: center;
+            align-items: flex-start;
+            
+        }
+        .container7-hijo2--doc1---profesion1 p , .container7-hijo2--doc2---profesion2 p,.container7-hijo2--doc3---profesion3 p{
+            margin-top: 0px;
+        }
+        .decoracion{
+            border: 1px solid #00bdc9;
+        }
+        .container8{
+            width: 100%;
+            background-image: linear-gradient(rgba(255, 230, 0, 0.555),rgba(255,230,0,0.555)), url(img/fondo.png);
+            background-repeat: no-repeat;
+            display: flex;
+            height: 575px;
+            justify-content: space-evenly;
+            align-items: center;
+                      
+        }
+        .container8-section1,.container8-section2,.container8-section3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .text1,.text2{
+            color: whitesmoke;
+        }
+        .text1{
+            font-size: 28px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .text1 p{
+            margin-bottom: 0px;
+        }
+        
+        .text2{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .text2 h3{
+            margin-top: 13px;
+        }
+        .container9{
+            width: 100%;
+            height: 900px;
+            
+        }
+        .post1,.post2,.post3{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(163, 160, 160, 0.705);
+            padding: 10px;
+            width: 25%;
+        }
+        .container9-section1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .container9-section1 h3{
+            font-size: 50px;
+           
+            margin-bottom: 5px;
+        }
+        .container9-section1 p{
+            font-size: 30px;
+            text-align: center;
+            
+        }
+        .container9-section2{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .container9-veterinarios{
+            display: flex;
+            width: 100%;
+        }
+        .container9-veterinarios img{
+            width: 100%;
+        }
+        .fecha{
+            color: #00bdc9;
+            font-weight: bold;
+            font-size: 12px;
+            
+        }
+        .fecha p{
+            margin-top: 0px;
+        }
+        .container9-title h4{
+            margin-bottom: 10px;
+            
+        }
+        .container9-parrafo p{
+            font-size: 13px;
+        }
+        .container9-readmore a{
+            text-decoration: none;
+            color:#00bdc9;
+            font-weight: bold;
+        }
+        .container10{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            height: 400px;
+            background-color: #343434;
+            
+        }
+        .container10-section1,.container10-section2{
+            display: flex;
+            align-items: center;
+            width: 20%;
+            color: whitesmoke;
+
+        }
+        .container10-section1 div ul li,.container10-section2 li{
+            list-style: none;
+            
+        }
+        .container10-section3{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 30%;
+
+        }
+        .container10-section3-titulo h3{
+            color: whitesmoke;
+            font-size: 30px;
+            text-align: end;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .container10-section3-parrafo p{
+            color: whitesmoke;
+            font-size: 15px;
+            text-align: end;
+            margin-top: 0px;
+        }
+        .footer-colores{
+            display: flex;
+            
+            width: 100%;
+        }
+        .color1{
+            width: 70%;
+            background-color: #daac00;
+        }
+        .color2{
+            display: flex;
+            justify-content: center;
+            width: 30%;
+            background-color: #00bdc9;
+        }
+        
+
+        .redessociales{
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 10px;
+            width: 100%;
+        }
+        .redessociales img{
+            width: 20px;
+        }
+        .container10-principal{
+            font-size: 30px;
+        }
+        .container10-footer-list ul{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="contenedor-padre">
+    <header class="container">
+        <div class="logo"><img src="img/img1.png" alt="Logo de la empresa"></div>
+        <div class="barra">
+            <a href="#home">Home</a>
+            <a href="#">About</a>
+            <a href="#services">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <div class="buscador">
+            <input type="text" placeholder="Search" name="lupa1">
+        </div>
+        <div class="lupa"><img src="img/img3.png" alt="" name="lupa1"></div>
+
+    </header>
+
+    <main id="home">
+        
+        <div class="container-dog" >
+            <div class="box"><!--Contenedor 1-->
+                <div class="box-text"> 
+                <h1>First I wanted to be <br>a veterinarian</h1>
+                </div>
+                <div class="box-parrafo">
+                <p>Lorem Ipsum available but the majority have<br>
+                    suffered alteration in some form, by injected<br> humour randomised words.
+                </p>
+                </div>
+                          
+                <div class="box-contact">
+                    <a href="#" class="contact1">Contact Us</a>
+                    <a href="#" class="contact2">Our Service</a>
+                </div>
+            
+            </div> 
+            <div class="box-img"><!--Contenedor 2-->
+                <img src="img/img2.png" alt="Dog Mascota">
+            </div>
+                       
+        
+        </div>
+
+    </main>
+    <div class="container3"> <!--Contenedor - padre -->
+        <div class="container3-sec2"> <!--Hijo 1-->
+             
+            <div class="container3-sec2--titulo" >
+                <h2>As a veterinarian and <br>lover of animals</h2>
+
+            </div>
+
+            <div class="container3-sec2--parrafo" >
+                <p>Lorem Ipsum available but the majoty<br>
+                    suffered alteration in some form, by<br>
+                    humour randomised words</p>
+            </div>
+            <div class="container3-sec2--contact" style="display: flex; ">
+                <a href="#">Our Service</a>
+            </div>
+        </div>
+
+
+        <div class="container3-sec2--img" style="display: flex;"> <!--Hijo 2-->
+
+            <img src="img/vet1.png" alt="Veterinario">
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="container4" id="services">
+
+        <div class="container4-text">
+            <div class="container4-text--titulo">
+                <h2 >Services</h2>
+            </div>
+            <div class="container4-text--parrafo">
+                <p>Lorem Ipsum available, but the majority have<br>
+                    suffered alteration in some form.</p>
+            </div>
+        </div>
+
+        <div class="container4-img"><!--Padre de los imagenes-->
+            <div class="container4-img1"><!-- Primer Hijo del contenedor-->
+
+                <div class="container4-img1--veti1" style="display: flex;">
+                 <img src="img/vet2.png" alt="Veterinario1">               
+                </div>
+                
+                <div class="container4-img1--titulo">
+                  <h3>Veterinarian</h3>                       
+                </div>
+
+                <div class="container4-img1--parrafo">
+                    <p>Lorem Ipsum available, but<br>
+                    the majority have suffered
+                    alteration in some.</p>
+                </div>
+
+            </div>
+
+            <div class="container4-img2"><!-- Segundo Hijo del contenedor 4-->
+
+                <div class="container4-img2--veti2">
+                    <img src="img/vet3.png" alt="Veterinario2"><!--Segunda imagen-->
+                </div>
+
+                <div class="container4-img2--titulo">
+                    <h3>Vaccination Care</h3>                       
+                </div>
+
+                <div class="container4-img2--parrafo">
+                    <p>Lorem Ipsum available, but<br>
+                    the majority have suffered
+                    alteration in some.</p>
+                </div>
+
+            </div>
+
+
+
+            <div class="container4-img3"><!-- Tercer Hijo del contenedor 4-->
+
+                <div class="container4-img3--veti3">
+                    <img src="img/vet4.png" alt="Veterinario3"><!--Segunda imagen-->
+                </div>
+
+                <div class="container4-img3--titulo">
+                    <h3>Dental Care</h3>                       
+                </div>
+
+                <div class="container4-img3--parrafo">
+                    <p>Lorem Ipsum available, but<br>
+                    the majority have suffered
+                    alteration in some.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container5">
+
+
+        <div class="container5-hijo1">
+            <img src="img/vet5.png" alt="Veterinario dog">
+        </div>
+        <div class="container5-hijo2">
+            <div class="container5-hijo2--titulo">
+                <h3 >
+                    As a veterinarian and<br>
+                    lover of animals
+                </h3>
+            </div>
+
+            <div class="container5-hijo2--parrafo">
+                <p>Lorem Ipsum available but the majoty<br>
+                    suffered alteration in some form, by<br>
+                    humour randomised words
+                </p>
+            </div>
+
+            <div class="container5-hijo2--boton">
+                <a href="#services">Our Service</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <div class="container6" >   
+
+        <div class="container6-text">
+            <div class="container6-text--titulo">
+                <h2 >Title Here</h2>
+            </div>
+            <div class="container6-text--parrafo">
+                <p>Lorem Ipsum available, but the majority have<br>
+                    suffered alteration in some form.</p>
+            </div>
+        </div>
+
+        <div class="container6-img">
+            <div class="container6-img1">
+
+                <div class="container6-img1--dog1" style="display: flex;">
+                 <img src="img/dog1.png" alt="Mascota1" class="dog">               
+                </div>
+                <div class="precio1">
+                    <p><s>$50</s></p>
+                    <p>$30</p>
+                </div>
+                
+                <div class="comprar">
+                    <a href="#">Buy Now</a>
+                </div>
+
+            </div>
+
+            <div class="container6-img2">
+
+                <div class="container6-img2--dog2">
+                    <img src="img/dog2.png" alt="Mascota2" class="dog">
+                </div>
+                <div class="precio1">
+                    <p><s>$40</s></p>
+                    <p>$25</p>
+                </div>
+                <div class="comprar">
+                    <a href="#">Buy Now</a>
+                </div>
+
+            </div>
+
+
+
+            <div class="container6-img3">
+                <div class="container6-img3--dog3">
+                    <img src="img/dog3.png" alt="Mascota3" class="dog">
+                </div>
+                <div class="precio1">
+                    <p><s>$45</s></p>
+                    <p>$20</p>
+                </div>
+                <div class="comprar">
+                    <a href="#">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container7">
+        <div class="container7-hijo1">
+
+            <div class="container7-hijo1--titulo">
+                <h3>The vetcare team</h3>
+            </div>
+
+            <div class="container7-hijo1--parrafo">
+                <p>Lorem Ipsum available, but the majority have<br>
+                    suffered alteration in some form.
+                </p>
+            </div>
+        </div>
+        <div class="container7-hijo2">
+
+            <div class="container7-hijo2--doc1 decoracion" >
+                <div class="container7-hijo2--doc1---img1">
+                    <img src="img/doc1.png" alt="doctora1">
+                </div>
+                <div class="container7-hijo2--doc1---titulo1">
+                    <h3>Jennifer Mullen</h3>
+                </div>
+                <div class="container7-hijo2--doc1---profesion1">
+                    <p>VETERINARY</p>
+                </div>
+                <div class="logotipos">
+                    <div class="logos"><img src="img/instagram.png" alt=""></div>
+                    <div class="logos"><img src="img/facebook.png" alt=""></div>
+                    <div class="logos"><img src="img/twitter.png" alt=""></div>
+                    <div class="logos"><img src="img/whatsapp.png" alt=""></div>
+                </div>
+
+            </div>
+
+            <div class="container7-hijo2--doc2 decoracion">
+                <div class="container7-hijo2--doc2---img2">
+                    <img src="img/doc2.png" alt="doctora2">
+                </div>
+                <div class="container7-hijo2--doc2---titulo2">
+                    <h3>Sheeren Collins</h3>
+                </div>
+                <div class="container7-hijo2--doc2---profesion2">
+                    <p>ADMINISTRATION</p>
+                </div>
+                <div class="logotipos">
+                    <div class="logos"><img src="img/instagram.png" alt=""></div>
+                    <div class="logos"><img src="img/facebook.png" alt=""></div>
+                    <div class="logos"><img src="img/twitter.png" alt=""></div>
+                    <div class="logos"><img src="img/whatsapp.png" alt=""></div>
+                </div>
+
+            </div>
+
+
+            <div class="container7-hijo2--doc3 decoracion" >
+                <div class="container7-hijo2--doc3---img3">
+                    <img src="img/doc3.png" alt="doctora3">
+                </div>
+                <div class="container7-hijo2--doc3---titulo3">
+                    <h3>Jennifer Mullen</h3>
+                </div>
+                <div class="container7-hijo2--doc3---profesion3">
+                    <p>VETERINARY</p>
+                </div>
+                <div class="logotipos">
+                    <div class="logos"><img src="img/instagram.png" alt=""></div>
+                    <div class="logos"><img src="img/facebook.png" alt=""></div>
+                    <div class="logos"><img src="img/twitter.png" alt=""></div>
+                    <div class="logos"><img src="img/whatsapp.png" alt=""></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+    <div class="container8">
+        <div class="container8-section1"> 
+            <div><img src="img/img4.png" alt=""></div>
+            <div class="text1"><p>+34793</p></div>
+            <div class="text2"><h3>Happy Clients</h3></div>
+        </div>
+
+        <div class="container8-section2">
+            <div><img src="img/img5.png" alt=""></div>
+            <div class="text1"><p>+45382</p></div>
+            <div class="text2"><h3>Departament</h3></div>
+        </div>
+        <div class="container8-section3">
+            <div><img src="img/img6.png" alt=""></div>
+            <div class="text1"><p>+54762</p></div>
+            <div class="text2"><h3>Vaccinations</h3></div>
+        </div>
+    </div>
+
+
+    <div class="container9">
+        <div class="container9-section1">
+            <div><h3>Recent Posts</h3></div>
+            <div><p> Lorem Ipsum available, but the majority have<br>
+                suffered alteration in some form.</p></div>
+        </div>
+
+        <div class="container9-section2">
+            <div class="post1">
+                <div class="container9-veterinarios"><img src="img/vet6.png" alt="Veterinario"></div>
+                <div class="container9-title"><h4>As a veterinarian and<br>
+                    lover of animals</h4>
+                </div>
+                <div class="fecha">FEBRUARY 09,2020</div>
+                <div class="container9-parrafo"><p>Lorem Ipsum available, but the majo
+                    rity have suffered alteration in some
+                    words which look</p>
+                </div>
+                <div class="container9-readmore"><a href="#">Read More>></a></div>
+            </div>
+
+            <div class="post2">
+                <div class="container9-veterinarios"><img src="img/vet7.png" alt="Veterinario"></div>
+                <div class="container9-title"><h4>As a veterinarian and<br>
+                    lover of animals</h4>
+                </div>
+                <div class="fecha">FEBRUARY 09,2020</div>
+                <div class="container9-parrafo"><p>Lorem Ipsum available, but the majo
+                    rity have suffered alteration in some
+                    words which look</p>
+                </div>
+                <div class="container9-readmore"><a href="#">Read More>></a></div>
+            </div>
+            <div class="post3">
+                <div class="container9-veterinarios"><img src="img/vet8.png" alt="veterinario"></div>
+                <div class="container9-title"><h4>As a veterinarian and<br>
+                    lover of animals</h4>
+                </div>
+                <div class="fecha">FEBRUARY 09,2020</div>
+                <div class="container9-parrafo"><p>Lorem Ipsum available, but the majo
+                    rity have suffered alteration in some
+                    words which look</p>
+                </div>
+                <div class="container9-readmore"><a href="#">Read More>></a></div>
+            </div>
+        </div>
+    </div>
+    <footer class="container10">
+        <div class="container10-section1">
+            <div class="container10-footer-list">
+                <ul>
+                    <li class="container10-principal">About</li>
+                    <li>History</li>
+                    <li>Our Team</li>
+                    <li>Brand Guidelines</li>
+                    <li>Terms&condition</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="container10-section2">
+            <div class="container10-footer-list">
+                <ul>
+                    <li class="container10-principal">Services</li>
+                    <li>How to Order</li>
+                    <li>Our Product</li>
+                    <li>Order Status</li>
+                    <li>Promo</li>
+                    <li>payment Method</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="container10-section3">
+            <div class="container10-section3-titulo"><h3>Title Here</h3></div>
+            <div class="container10-section3-parrafo"><p>Lorem ipsum available, but the majorit</p></div>
+            <div class="footer-colores">
+                <div class="color1"></div>
+                <div class="color2">
+                    <img src="img/flecha.png" alt="">
+                </div>
+            </div>
+            <div class="redessociales">
+                <div><a href="#"><img src="img/insta.png" alt=""></a></div>
+                <div><a href="#"><img src="img/face.png" alt=""></a></div>
+                <div><a href="#"><img src="img/twit.png" alt=""></a></div>
+                <div><a href="#"><img src="img/what.png" alt=""></a></div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

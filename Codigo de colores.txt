@@ -1,0 +1,2 @@
+daac00  Color de la Barra menú
+fcc302 Color de fondo del contenido
